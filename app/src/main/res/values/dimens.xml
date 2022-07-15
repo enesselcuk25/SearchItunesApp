@@ -7,11 +7,17 @@
     <dimen name="layout_marginVertical">10dp</dimen>
     <dimen name="marginHorizontal">10dp</dimen>
     <dimen name="paddingHorizontal">10dp</dimen>
+    <dimen name="marginHorizontalDetail">50dp</dimen>
+    <dimen name="marginVerticalDetail">20dp</dimen>
+
+
+
+    <dimen name="marginVertical">5dp</dimen>
     <dimen name="maxWidth">250dp</dimen>
     <dimen name="maxHeight">60dp</dimen>
     <dimen name="minWidth">200dp</dimen>
-    <dimen name="minHeight">55dp</dimen>
-    <dimen name="textSize">16sp</dimen>
+    <dimen name="minHeight">200dp</dimen>
+    <dimen name="textSize">18sp</dimen>
     <dimen name="textSize_item_top">24sp</dimen>
     <dimen name="cornerRadius">10dp</dimen>
 

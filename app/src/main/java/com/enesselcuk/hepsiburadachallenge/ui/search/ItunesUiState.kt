@@ -5,6 +5,6 @@ import com.enesselcuk.hepsiburadachallenge.data.remote.model.Result
 
 data class ItunesUiState(
     val isLoading: Boolean? = null,
-    val isError: String? = null,
+    val isError: Boolean? = null,
     val result: List<Result> = emptyList()
 )

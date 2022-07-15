@@ -32,7 +32,7 @@ class SearchViewModel @Inject constructor(
                             _uiState.update {
                                 it.copy(
                                     isLoading = true,
-                                    isError = null,
+                                    isError = false,
                                     result = networkResult.data?.results ?: emptyList()
                                 )
                             }
@@ -41,7 +41,7 @@ class SearchViewModel @Inject constructor(
                             _uiState.update {
                                 it.copy(
                                     isLoading = false,
-                                    isError = null,
+                                    isError = false,
                                     result = networkResult.data?.results ?: emptyList()
                                 )
                             }
@@ -50,7 +50,7 @@ class SearchViewModel @Inject constructor(
                             _uiState.update {
                                 it.copy(
                                     isLoading = false,
-                                    isError = null,
+                                    isError = true,
                                     result = networkResult.data?.results ?: emptyList()
                                 )
                             }

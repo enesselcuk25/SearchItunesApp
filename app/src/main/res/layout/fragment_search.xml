@@ -11,10 +11,6 @@
             type="Boolean" />
 
         <variable
-            name="setSearchTest"
-            type="com.enesselcuk.hepsiburadachallenge.ui.search.SearchViewModel" />
-
-        <variable
             name="mediaClick"
             type="com.enesselcuk.hepsiburadachallenge.ui.search.SearchFragment" />
 

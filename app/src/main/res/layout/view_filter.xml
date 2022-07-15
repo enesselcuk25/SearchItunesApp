@@ -3,15 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
-        <variable
-            name="priceVisible"
-            type="Boolean" />
-
         <variable
             name="media1"
             type="com.enesselcuk.hepsiburadachallenge.ui.search.SearchFragment" />
-
     </data>
 
     <LinearLayout
@@ -80,7 +74,5 @@
                 android:textSize="12sp"
                 app:cornerRadius="10dp" />
         </com.google.android.material.button.MaterialButtonToggleGroup>
-
-
     </LinearLayout>
 </layout>

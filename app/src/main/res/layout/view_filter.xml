@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="priceVisible"
+            type="Boolean" />
+
+        <variable
+            name="media1"
+            type="com.enesselcuk.hepsiburadachallenge.ui.search.SearchFragment" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/liner_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="10dp"
+        android:gravity="center|top"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/milk"
+            android:text="@string/movies"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:cornerRadius="8dp"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <Button
+                android:id="@+id/moviesButton"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> media1.clickMovie()}"
+                android:text="@string/movies"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/musicButton"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> media1.clickMusic()}"
+                android:text="@string/music"
+                android:textAllCaps="false"
+                android:textColor="#1E1E1E"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/appsButton"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> media1.clickApps()}"
+                android:text="@string/apps"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/booksButton"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> media1.clickBooks()}"
+                android:text="@string/books"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:cornerRadius="10dp" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+    </LinearLayout>
+</layout>

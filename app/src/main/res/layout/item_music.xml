@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="musicData"
+            type="com.enesselcuk.hepsiburadachallenge.data.remote.model.Result" />
+
+        <variable
+            name="mClick"
+            type="com.enesselcuk.hepsiburadachallenge.ui.search.adapter.ItunesAdapter.MusicClick" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/marginHorizontal"
+        android:layout_marginVertical="@dimen/layout_marginVertical_s"
+        android:background="@drawable/line_image"
+        android:onClick="@{() -> mClick.onClick(musicData)}"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/paddingHorizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:adjustViewBounds="true"
+            android:minWidth="110dp"
+            android:minHeight="90dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:musicImage="@{musicData.artworkUrl100}"
+            app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="15dp"
+            android:fontFamily="@font/inter_bold"
+            android:maxWidth="300dp"
+            android:text="@{musicData.collectionName}"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_food"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Batman" />
+
+        <TextView
+            android:id="@+id/text_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:fontFamily="@font/inter_bold"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/text_collectionPrice"
+            app:layout_constraintStart_toEndOf="@id/image_food"
+            app:layout_constraintTop_toBottomOf="@id/text_name"
+            app:setReleaseDate="@{musicData.releaseDate}"
+            tools:text="10/07/2020" />
+
+
+        <TextView
+            android:id="@+id/text_collectionPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="@{musicData.collectionPrice.toString()}"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_name"
+            tools:text="14.99" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_food" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

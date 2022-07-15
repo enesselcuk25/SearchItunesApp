@@ -61,7 +61,6 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(FragmentSearchBinding
     fun clickMovie() {
 
         musicAdapter.notifyDataSetChanged()
-
         val arrayMovies = ArrayList<Result>()
         musicAdapter.currentList.forEach {
             viewModel.fetchSearch(name = it.trackName, limit = limit, QUERY_MOVIES)
@@ -69,7 +68,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(FragmentSearchBinding
 
         }
         musicAdapter.submitList(arrayMovies)
-        searchMusic()
+   //     searchMusic()
     }
 
     fun clickMusic() {
@@ -82,7 +81,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(FragmentSearchBinding
 
         }
         musicAdapter.submitList(arrayMusic)
-        searchMusic()
+       // searchMusic()
 
     }
 
@@ -95,7 +94,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(FragmentSearchBinding
             arrayApps.addAll(listOf(it))
         }
         musicAdapter.submitList(arrayApps)
-        searchMusic()
+      //  searchMusic()
 
     }
 
@@ -107,7 +106,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(FragmentSearchBinding
             arrayBooks.addAll(listOf(it))
         }
         musicAdapter.submitList(arrayBooks)
-        searchMusic()
+       // searchMusic()
     }
 
     private fun musicState(musicUiState: ItunesUiState) {

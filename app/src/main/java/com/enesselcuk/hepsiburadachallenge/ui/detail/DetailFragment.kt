@@ -3,7 +3,7 @@ package com.enesselcuk.hepsiburadachallenge.ui.detail
 
 import androidx.navigation.fragment.navArgs
 import com.enesselcuk.hepsiburadachallenge.databinding.FragmentDetailBinding
-import com.enesselcuk.hepsiburadachallenge.ui.BaseFragment
+import com.enesselcuk.hepsiburadachallenge.common.BaseFragment
 
 
 class DetailFragment : BaseFragment<FragmentDetailBinding>(FragmentDetailBinding::inflate) {

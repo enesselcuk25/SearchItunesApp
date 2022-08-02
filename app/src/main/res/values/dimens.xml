@@ -15,8 +15,11 @@
     <dimen name="maxWidth">250dp</dimen>
     <dimen name="maxWidth2">300dp</dimen>
     <dimen name="maxHeight">60dp</dimen>
-    <dimen name="minWidth">200dp</dimen>
-    <dimen name="minHeight">200dp</dimen>
+    <dimen name="minWith_item_search">80dp</dimen>
+    <dimen name="maxHeight_searchImage">250dp</dimen>
+    <dimen name="minWidth">180dp</dimen>
+    <dimen name="minHeight">100dp</dimen>
+    <dimen name="minHeight_item_search">100dp</dimen>
     <dimen name="textSize">18sp</dimen>
     <dimen name="textSize2">12sp</dimen>
     <dimen name="textSize_item_top">24sp</dimen>

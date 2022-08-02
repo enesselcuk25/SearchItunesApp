@@ -1,4 +1,4 @@
-package com.enesselcuk.hepsiburadachallenge.ui
+package com.enesselcuk.hepsiburadachallenge.common
 
 import android.os.Bundle
 import android.view.LayoutInflater

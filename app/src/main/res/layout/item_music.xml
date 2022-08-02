@@ -16,11 +16,13 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/marginHorizontal"
         android:layout_marginVertical="@dimen/layout_marginVertical_s"
         android:background="@drawable/line_image"
+        android:minWidth="@dimen/minWidth"
+        android:minHeight="@dimen/minHeight_item_search"
         android:onClick="@{() -> mClick.onClick(musicData)}"
         android:orientation="vertical"
         android:paddingHorizontal="@dimen/paddingHorizontal">
@@ -31,28 +33,31 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/marginVertical2"
             android:adjustViewBounds="true"
-            android:minWidth="@dimen/minWidth2"
-            android:minHeight="@dimen/minHeight2"
-            android:scaleType="fitCenter"
+            android:minWidth="@dimen/minWidth"
+            android:minHeight="@dimen/minHeight_item_search"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@id/text_name"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:musicImage="@{musicData.artworkUrl100}"
-            app:shapeAppearanceOverlay="@style/roundedImageView" />
-
+            app:shapeAppearanceOverlay="@style/SearchCircle" />
 
         <TextView
             android:id="@+id/text_name"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/marginVertical"
             android:fontFamily="@font/inter_bold"
-            android:maxWidth="@dimen/maxWidth2"
+            android:gravity="center_horizontal"
             android:text="@{musicData.collectionName}"
+            android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="@dimen/textSize2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/image_food"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/text_data"
+            app:layout_constraintEnd_toEndOf="@id/image_food"
+            app:layout_constraintStart_toStartOf="@id/image_food"
+            app:layout_constraintTop_toBottomOf="@id/image_food"
             tools:text="Batman" />
 
         <TextView
@@ -63,12 +68,11 @@
             android:fontFamily="@font/inter_bold"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/text_collectionPrice"
-            app:layout_constraintStart_toEndOf="@id/image_food"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="10dp"
             app:layout_constraintTop_toBottomOf="@id/text_name"
             app:setReleaseDate="@{musicData.releaseDate}"
             tools:text="10/07/2020" />
-
 
         <TextView
             android:id="@+id/text_collectionPrice"
@@ -80,16 +84,17 @@
             android:text="@{musicData.collectionPrice.toString()}"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/text_data"
             app:layout_constraintTop_toBottomOf="@id/text_name"
             tools:text="14.99" />
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/image_food" />
+        <!--        <View-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="8dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/image_food" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

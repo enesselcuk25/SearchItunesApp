@@ -18,18 +18,19 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/image_food"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/marginHorizontal"
             android:layout_marginVertical="@dimen/marginVertical"
             android:adjustViewBounds="true"
-            android:minHeight="@dimen/minHeight"
             android:scaleType="fitCenter"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintBottom_toTopOf="@id/texy_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:musicImage="@{setData.artworkUrl100}"
-            app:shapeAppearanceOverlay="@style/roundedImageView" />
+            app:shapeAppearanceOverlay="@style/circle" />
 
         <TextView
             android:id="@+id/texy_name"
@@ -62,7 +63,7 @@
             android:id="@+id/texy_country"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/layout_marginVertical"
+            android:layout_marginVertical="@dimen/layout_marginVertical_s"
             android:fontFamily="@font/nunito_bold"
             android:text="@{setData.country}"
             android:textSize="@dimen/textSize"
@@ -75,7 +76,7 @@
             android:id="@+id/texy_kind"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/layout_marginVertical"
+            android:layout_marginVertical="@dimen/layout_marginVertical_s"
             android:fontFamily="@font/nunito_bold"
             android:text="@{setData.kind}"
             android:textSize="@dimen/textSize"
@@ -89,7 +90,7 @@
             android:id="@+id/trackCensoredName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/layout_marginVertical"
+            android:layout_marginVertical="@dimen/layout_marginVertical_s"
             android:fontFamily="@font/nunito_bold"
             android:text="@{setData.trackCensoredName}"
             android:textSize="@dimen/textSize"

@@ -13,9 +13,7 @@
         <variable
             name="mediaClick"
             type="com.enesselcuk.hepsiburadachallenge.ui.search.SearchFragment" />
-
     </data>
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -29,7 +27,11 @@
             android:layout_marginHorizontal="@dimen/marginHorizontal"
             android:layout_marginVertical="@dimen/marginVertical"
             android:background="@drawable/line_search"
+            android:imeOptions="actionSearch"
+            android:inputType="textNoSuggestions"
+            android:layoutDirection="rtl"
             android:queryHint="Game Search"
+            app:layout_constraintBottom_toTopOf="@id/include_filter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -39,6 +41,7 @@
             layout="@layout/view_filter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/recyclerView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/searchView"
@@ -47,11 +50,14 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginVertical="@dimen/marginVertical"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/include_filter"
+            app:spanCount="2"
             tools:listitem="@layout/item_music" />
 
 

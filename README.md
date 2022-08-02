@@ -1,4 +1,4 @@
-# HepsiburadaSample
+# SearchItunesApp
 
 Libraries Used
 --------------

@@ -11,93 +11,101 @@
     </data>
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.detail.DetailFragment">
+        android:layout_height="match_parent">
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/image_food"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/marginHorizontal"
-            android:layout_marginVertical="@dimen/marginVertical"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_launcher_background"
-            app:layout_constraintBottom_toTopOf="@id/texy_name"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:musicImage="@{setData.artworkUrl100}"
-            app:shapeAppearanceOverlay="@style/circle" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingBottom="@dimen/padding"
+            tools:context=".ui.detail.DetailFragment">
 
-        <TextView
-            android:id="@+id/texy_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/marginHorizontalDetail"
-            android:layout_marginVertical="@dimen/marginVerticalDetail"
-            android:fontFamily="@font/nunito_bold"
-            android:text="@{setData.artistName}"
-            android:textSize="@dimen/textSize"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/image_food"
-            tools:text="Jack Johnson" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/marginHorizontal"
+                android:layout_marginVertical="@dimen/marginVertical"
+                android:adjustViewBounds="true"
+                android:paddingHorizontal="@dimen/padding"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toTopOf="@id/texy_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:musicImage="@{setData.artworkUrl100}"
+                app:shapeAppearanceOverlay="@style/circle" />
 
-
-        <TextView
-            android:id="@+id/texy_trackName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/marginVerticalDetail"
-            android:fontFamily="@font/nunito_bold"
-            android:text="@{setData.trackName}"
-            android:textSize="@dimen/textSize"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/texy_name"
-            tools:text="You And Your Heart" />
-
-        <TextView
-            android:id="@+id/texy_country"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/layout_marginVertical_s"
-            android:fontFamily="@font/nunito_bold"
-            android:text="@{setData.country}"
-            android:textSize="@dimen/textSize"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/texy_trackName"
-            tools:text="USA" />
-
-        <TextView
-            android:id="@+id/texy_kind"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/layout_marginVertical_s"
-            android:fontFamily="@font/nunito_bold"
-            android:text="@{setData.kind}"
-            android:textSize="@dimen/textSize"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/texy_country"
-            tools:text="music-video" />
+            <TextView
+                android:id="@+id/texy_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/marginHorizontalDetail"
+                android:layout_marginVertical="@dimen/marginVerticalDetail"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@{setData.artistName}"
+                android:textSize="@dimen/textSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_food"
+                tools:text="Jack Johnson" />
 
 
-        <TextView
-            android:id="@+id/trackCensoredName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/layout_marginVertical_s"
-            android:fontFamily="@font/nunito_bold"
-            android:text="@{setData.trackCensoredName}"
-            android:textSize="@dimen/textSize"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/texy_kind"
-            tools:text="Sleep Through The Static / I Love You And Buddha Too (Live From The Solar Powered Plastic Plant)" />
+            <TextView
+                android:id="@+id/texy_trackName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/marginVerticalDetail"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@{setData.trackName}"
+                android:textSize="@dimen/textSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/texy_name"
+                tools:text="You And Your Heart" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/texy_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/layout_marginVertical_s"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@{setData.country}"
+                android:textSize="@dimen/textSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/texy_trackName"
+                tools:text="USA" />
+
+            <TextView
+                android:id="@+id/texy_kind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/layout_marginVertical_s"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@{setData.kind}"
+                android:textSize="@dimen/textSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/texy_country"
+                tools:text="music-video" />
+
+
+            <TextView
+                android:id="@+id/trackCensoredName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/layout_marginVertical_s"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@{setData.trackCensoredName}"
+                android:textSize="@dimen/textSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/texy_kind"
+                tools:text="Sleep Through The Static / I Love You And Buddha Too (Live From The Solar Powered Plastic Plant)" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 </layout>

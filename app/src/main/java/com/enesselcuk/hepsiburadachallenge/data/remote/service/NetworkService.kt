@@ -5,7 +5,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface NetworkService {
-
     @GET("search")
     suspend fun searchName(
         @Query("term") term: String? = null,

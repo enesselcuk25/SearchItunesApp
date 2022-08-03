@@ -1,4 +1,4 @@
-# HepsiburadaSample
+# SearchItunesApp
 
 Libraries Used
 --------------
@@ -14,15 +14,19 @@ Libraries Used
   * [Coroutines][16] is used for asynchronous programming on Android
   * [koltin-parecelize][17] is used between screens to data carry 
   
-Architecture
---------------
+Clean Architecture
+-----------------------
+![https://fernandocejas.com/2018/05/07/architecting-android-reloaded/](https://github.com/android10/Sample-Data/blob/master/Android-CleanArchitecture-Kotlin/architecture/clean_architecture_reloaded_main.png)
+
+ UI Layer: MVVM 
+ ------------------------
 The app uses [MVVM architecture][15] to have a unidirectional flow of data, separation of concern, testability, and a lot more.
 
 ![Architecture](https://developer.android.com/topic/libraries/architecture/images/final-architecture.png)
 
 Preview
 -----------
-https://user-images.githubusercontent.com/52752443/179228029-1484e08d-27d6-420b-b935-5b0125a1e251.mp4
+https://user-images.githubusercontent.com/52752443/182447998-f72c3e89-d682-425d-b92c-3a0b0729be46.mp4
 
 [1]: https://www.balldontlie.io/#introduction
 [2]: https://developer.android.com/topic/architecture/intro
